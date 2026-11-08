@@ -1,6 +1,6 @@
 Thanks for downloading this template!
 
-Template Name: MyResume
+Template Name: Justima Korsun CV
 Template URL: https://bootstrapmade.com/free-html-bootstrap-template-my-resume/
-Author: BootstrapMade.com
+Author: Justina Korsun
 License: https://bootstrapmade.com/license/

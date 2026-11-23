@@ -306,4 +306,417 @@ iframe {
 .services table tr:hover td {
   background-color: #ffe9dd;
 }
+/* =====================================================
+   10 LABORATORINIS DARBAS
+   ===================================================== */
+ 
+#kompetencijos {
+  margin-bottom: 25px;
+}
+ 
+/* ----- Viršutinė modulio dalis ----- */
+.modulio-virsus {
+  background-color: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+  padding: 20px;
+  margin-bottom: 25px;
+}
+ 
+/* XP, lygis, rangas (Grid) */
+.kompetencijos-info {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-bottom: 20px;
+}
+ 
+.info-kortele {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 16px 20px;
+  border-radius: 14px;
+  color: #12343b;
+}
+ 
+.info-kortele i {
+  font-size: 2rem;
+}
+ 
+.info-kortele small {
+  display: block;
+  font-size: 0.9rem;
+}
+ 
+.info-kortele strong {
+  font-size: 1.5rem;
+}
+ 
+.info-xp { background-color: #e3f0ff; }
+.info-lygis { background-color: #efe6ff; }
+.info-rangas { background-color: #e1f5e6; }
+ 
+/* ----- Progreso juosta ----- */
+.xp-blokas {
+  margin-bottom: 20px;
+}
+ 
+.xp-pavadinimas {
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+ 
+.xp-juosta {
+  height: 26px;
+  background-color: #dde5e8;
+  border-radius: 20px;
+  overflow: hidden;
+}
+ 
+.xp-uzpildas {
+  width: 40%;
+  height: 100%;
+  background-color: #0b6b7a;
+  color: #ffffff;
+  text-align: center;
+  line-height: 26px;
+  font-size: 0.9rem;
+  font-weight: 700;
+  border-radius: 20px;
+}
+ 
+/* ----- Statistika (Flexbox) ----- */
+.statistika {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 15px;
+  padding-top: 15px;
+  border-top: 1px solid #dde5e8;
+}
+ 
+.statistika i {
+  color: #0b6b7a;
+}
+ 
+/* ----- Įgūdžių lenta (Grid) ----- */
+.lenta {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  align-items: start;
+}
+ 
+.stulpelis {
+  background-color: #f4f8f9;
+  border-radius: 14px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  padding-bottom: 15px;
+}
+ 
+.stulpelis h3 {
+  margin: 0;
+  padding: 14px 18px;
+  font-size: 1.2rem;
+  border-bottom: 4px solid;
+}
+ 
+.planuojama h3 { background-color: #fff4e0; color: #6b4200; border-color: #f0a030; }
+.mokomasi h3 { background-color: #e3f0ff; color: #0d3f7a; border-color: #2f7de1; }
+.atlikta h3 { background-color: #e1f5e6; color: #14532d; border-color: #2e9e4f; }
+ 
+/* ----- Įgūdžių kortelės ----- */
+.igudzio-kortele {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background-color: #ffffff;
+  margin: 12px 15px 0 15px;
+  padding: 12px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+  transition: transform 0.3s;
+}
+ 
+.igudzio-kortele:hover {
+  transform: translateY(-3px);
+}
+ 
+.igudzio-kortele i {
+  font-size: 1.6rem;
+  color: #0b6b7a;
+}
+ 
+.kortele-tekstas {
+  flex: 1;
+}
+ 
+.kortele-tekstas strong {
+  display: block;
+  margin-bottom: 4px;
+}
+ 
+.busena {
+  display: inline-block;
+  font-size: 0.8rem;
+  padding: 2px 8px;
+  border-radius: 10px;
+}
+ 
+.busena-planuojama { background-color: #ffe9c2; color: #6b4200; }
+.busena-mokomasi { background-color: #d0e4ff; color: #0d3f7a; }
+.busena-atlikta { background-color: #cdeed7; color: #14532d; }
+ 
+.xp-zyme {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #12343b;
+  background-color: #eef4f5;
+  padding: 3px 8px;
+  border-radius: 8px;
+}
+ 
+/* Mažesni ekranai: viskas į vieną stulpelį */
+@media (max-width: 900px) {
+  .kompetencijos-info,
+  .lenta {
+    grid-template-columns: 1fr;
+  }
+}
+ 
+ 
+/* =====================================================
+   10 LD PAPILDOMA UŽDUOTIS (animacijos)
+   ===================================================== */
+ 
+/* 1. Paslaugų skilties animuotas gradientinis fonas */
+#services {
+  background: linear-gradient(-45deg, #e3f2fd, #fce4ec, #e8f5e9, #fff3e0);
+  background-size: 400% 400%;
+  animation: gradientas 12s ease infinite;
+}
+ 
+@keyframes gradientas {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+ 
+/* 2. "Apie" skilties CSS figūros */
+#about {
+  position: relative;
+}
+ 
+#about .container {
+  position: relative;
+  z-index: 1;
+}
+ 
+.figura {
+  position: absolute;
+  z-index: 0;
+  pointer-events: none;
+  opacity: 0.4;
+}
+ 
+/* Apskritimas - juda aukštyn ir žemyn (Floating) */
+.apskritimas {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  background-color: #0b6b7a;
+  top: 40px;
+  right: 6%;
+  animation: plaukimas 5s ease-in-out infinite;
+}
+ 
+/* Kvadratas - sukasi (Rotating) */
+.kvadratas {
+  width: 60px;
+  height: 60px;
+  background-color: #b5400f;
+  bottom: 40px;
+  left: 5%;
+  animation: sukimasis 8s linear infinite;
+}
+ 
+/* Trikampis - didėja ir mažėja (Scaling) */
+.trikampis {
+  width: 0;
+  height: 0;
+  border-left: 40px solid transparent;
+  border-right: 40px solid transparent;
+  border-bottom: 70px solid #12343b;
+  bottom: 50px;
+  right: 10%;
+  animation: didejimas 4s ease-in-out infinite;
+}
+ 
+@keyframes plaukimas {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-30px); }
+}
+ 
+@keyframes sukimasis {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+ 
+@keyframes didejimas {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.4); }
+}
+
+/* =====================================================
+   11 LABORATORINIS DARBAS - kontaktų forma
+   ===================================================== */
+
+.kontaktu-forma {
+  background-color: #ffffff;
+  padding: 25px;
+  border-radius: 14px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+}
+
+/* Formos išdėstymas (Grid) */
+.forma-tinklelis {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px 20px;
+}
+
+.pilnas {
+  grid-column: 1 / -1;
+}
+
+.vertinimai {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+/* Laukai */
+.laukas label {
+  display: block;
+  margin-bottom: 6px;
+  font-family: var(--heading-font);
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: #12343b;
+}
+
+.laukas input {
+  width: 100%;
+  padding: 10px 14px;
+  font-size: 1rem;
+  color: #222222;
+  background-color: #ffffff;
+  border: 2px solid #b0bec5;
+  border-radius: 6px;
+}
+
+.laukas input:focus {
+  outline: none;
+  border-color: #0b6b7a;
+}
+
+/* Validacija: raudonas rėmelis klaidos atveju, žalias kai viskas gerai */
+.laukas input.neteisingas {
+  border-color: #c62828;
+  background-color: #fff5f5;
+}
+
+.laukas input.teisingas {
+  border-color: #2e7d32;
+}
+
+.klaida {
+  display: block;
+  min-height: 18px;
+  margin-top: 4px;
+  font-size: 0.85rem;
+  color: #c62828;
+}
+
+/* Mygtukai */
+.mygtukai {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.mygtukai button {
+  padding: 12px 36px;
+  border: 0;
+  border-radius: 6px;
+  font-family: var(--heading-font);
+  font-weight: 600;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#siusti {
+  background-color: #12343b;
+  color: #ffffff;
+}
+
+#siusti:hover:enabled {
+  background-color: #b5400f;
+}
+
+#siusti:active:enabled {
+  background-color: #7a2a08;
+  transform: scale(0.95);
+}
+
+#siusti:disabled {
+  background-color: #cfd8dc;
+  color: #546e7a;
+  cursor: not-allowed;
+}
+
+#isvalyti {
+  background-color: #dfe7ea;
+  color: #12343b;
+}
+
+#isvalyti:hover {
+  background-color: #c9d6da;
+}
+
+/* Rezultatų sritis formos apačioje */
+.rezultatas {
+  margin-top: 20px;
+  padding: 15px 20px;
+  background-color: #eef4f5;
+  border-left: 4px solid #0b6b7a;
+  border-radius: 6px;
+  font-style: italic;
+  white-space: pre-line;
+}
+
+.vidurkis {
+  margin-top: 10px;
+  padding: 12px 20px;
+  background-color: #e1f5e6;
+  border-radius: 6px;
+  font-weight: 700;
+  color: #14532d;
+}
+
+.rezultatas:empty,
+.vidurkis:empty {
+  display: none;
+}
+
+/* Mažuose ekranuose laukai vienas po kito */
+@media (max-width: 600px) {
+  .forma-tinklelis,
+  .vertinimai {
+    grid-template-columns: 1fr;
+  }
+}
  

@@ -306,9 +306,6 @@ iframe {
 .services table tr:hover td {
   background-color: #ffe9dd;
 }
-/* =====================================================
-   10 LABORATORINIS DARBAS
-   ===================================================== */
  
 #kompetencijos {
   margin-bottom: 25px;
@@ -487,9 +484,6 @@ iframe {
 }
  
  
-/* =====================================================
-   10 LD PAPILDOMA UŽDUOTIS (animacijos)
-   ===================================================== */
  
 /* 1. Paslaugų skilties animuotas gradientinis fonas */
 #services {
@@ -569,9 +563,6 @@ iframe {
   50% { transform: scale(1.4); }
 }
 
-/* =====================================================
-   11 LABORATORINIS DARBAS - kontaktų forma
-   ===================================================== */
 
 .kontaktu-forma {
   background-color: #ffffff;
